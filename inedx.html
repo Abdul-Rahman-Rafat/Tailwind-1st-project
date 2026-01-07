@@ -5,9 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
-    <body>
-        <h1 class="text-3xl font-bold underline">
+    <body >
+        <!-- ex: text color and size and underline -->
+        <h1 class="text-3xl font-bold  underline">
         Hello world!
         </h1>
+
+        <!-- ex: text color and size and div background and gradient -->
+        <div class="text-yellow-50 text-2xl bg-black bg-gradient-to-r from-indigo-500 via-slate-600 to-fuchsia-500" >
+        This is a sample text with Tailwind CSS styling.
+        </div>
+
+        <!-- ex: border radius and his types  -->
+         <div>
+            <span class="rounded-md bg-black text-white ">
+                border radius small
+            </span>
+            <button class="bg-slate-600 text-white rounded-t-full" > click</button>
+        </div>
+
+        <!-- ex: box shadow -->
+        <div class="bg-orange-300 text-red-400 text-2xl rounded-md drop-shadow-md">
+            box shadow 
+        </div>
+
+        <!-- ex: hover effect with transition -->
+        <div >
+            <button class="bg-slate-600
+            text-white rounded-lg 
+            hover:drop-shadow-lg
+            hover:bg-black
+            transition-all duration-300 ease-in-out"> L click me </button>
+        </div>
+
+        <!-- ex: margin top and horizontal margin text center -->
+        <div class="mt-4 mx-48 
+        border-2 border-black  
+        text-center 
+        rounded-md 
+        drop-shadow-lg drop-shadow-slate-400 
+        bg-gray-200 
+        hover:bg-gray-400 transition-all duration-300 ease-in-out cursor-pointer hover:scale-105 hover:text-red-400"> margin top </div>
+
+
+        
+
+
+
+
+
+
+
     </body>
 </html>
