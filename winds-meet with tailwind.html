@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" type="image/svg+xml" href="images/plane-solid-full.svg">
+    
+
+    <title>WindsMeet with Tailwind CSS</title>
+</head>
+<body>
+    <main class="main">
+        <header class="flex items-center justify-between w-full m-auto py-3 px-24 absolute z-1000 transition-all duration-300 ease-in-out ">
+            <div class="logo-container flex flex-col items-center text-2xl cursor-pointer ">                        
+                <div class="sky flex gap-3 overflow-hidden">
+                    <i class="fa-solid fa-cloud cloud1 text-gray-100 text-2xl self-start"></i>
+                    <i class="fa-solid fa-plane planeLogo text-[#FAA935] text-4xl hover:text-orange-400"></i>
+                    <i class="fa-solid fa-cloud cloud2 text-gray-100 text-xl self-end"></i>
+                </div>
+                <h1 class="name text-white font-serif transition-all duration-300 ease-in-out hover:text-[#FAA935]" >WindsMeet</h1>
+            </div>
+
+            <div class="nav-links flex items-center justify-between py-0 px-48 text-gray-900 gap-12">
+                <ul class="links-list flex items-center list-none gap-1">
+                    <li class="p-4"><a class=" !no-underline text-white transition-all duration-300 ease-in-out font-serif hover:!text-[#FAA935]" href="index.html">Home</a></li>
+                    <li class="p-4"><a class=" !no-underline text-white transition-all duration-300 ease-in-out font-serif hover:!text-[#FAA935]" href="aboutUs.html">About</a></li>
+                    <li class="p-4"><a class=" !no-underline text-white transition-all duration-300 ease-in-out font-serif hover:!text-[#FAA935]" href="tours.html">Tours</a></li>
+                </ul>
+
+                <ul class="links-list2 flex items-center list-none gap-1">
+                    <li class="p-4"><a class=" !no-underline text-white transition-all duration-300 ease-in-out font-serif hover:!text-[#FAA935]" href="login.html">Login</a></li>
+                    <li class="p-4"><a class=" !no-underline text-white transition-all duration-300 ease-in-out font-serif bg-[#FAA935] rounded-[10px] p-[10px] hover:!text-orange-400 hover:bg-white" href="register.html"  >Register</a></li>
+                </ul>
+
+            </div>
+            <i id="burger-menu" class="fa-solid fa-bars !hidden  "></i> <!-- fa-bars-staggered -->
+        </header>
+
+
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators chosen-imgs">
+                <button id="chosen-1" class="active !w-[100px] !h-[150px] !rounded-[12px] !bg-[url(images/main-back1.1.png)] !bg-cover"   type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0"  aria-current="true" aria-label="Slide 1"></button>
+                <button id="chosen-2" class="!w-[100px] !h-[150px] !rounded-[12px] !bg-[url(images/main-back2.2.png)] !bg-cover"  type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button id="chosen-3" class="!w-[100px] !h-[150px] !rounded-[12px] !bg-[url(images/main-back3.3.png)] !bg-cover"  type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button id="chosen-4" class="!w-[100px] !h-[150px] !rounded-[12px] !bg-[url(images/main-back4.4.png)] !bg-cover"  type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button id="chosen-5" class="!w-[100px] !h-[150px] !rounded-[12px] !bg-[url(images/main-back5.5.png)] !bg-cover"  type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner h-screen object-cover filter brightness-50">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="images/main-back1.png" class="d-block w-100" alt="...">
+                    <div class="imgTxt">
+                        <h2>Discover Nature’s Masterpieces</h2>
+                        <p>Explore breathtaking landscapes where mountains meet green valleys and endless skies.
+                            Experience destinations that reconnect you with nature and refresh your soul.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="images/main-back2.png" class="d-block w-100" alt="...">
+                    <div class="imgTxt">
+                        <h2>Journeys Beyond Imagination</h2>
+                        <p>Travel to places you’ve only dreamed of, where every view feels like a postcard.
+                            Let us turn your travel dreams into unforgettable real-life moments.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="images/main-back3.png" class="d-block w-100" alt="...">
+                    <div class="imgTxt">
+                        <h2>Adventure Starts Here</h2>
+                        <p>From peaceful countryside escapes to thrilling mountain adventures, we’ve got you covered.
+                            Choose your path and let the journey shape your story.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="images/main-back4.png" class="d-block w-100" alt="...">
+                    <div class="imgTxt">
+                        <h2>Where Every Trip Tells a Story</h2>
+                        <p>Each destination has a story waiting to be discovered.
+                            Travel with us and create memories that last a lifetime.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="images/main-back5.png" class="d-block w-100" alt="...">
+                    <div class="imgTxt">
+                        <h2>Escape. Explore. Experience.</h2>
+                        <p>Leave the ordinary behind and step into extraordinary destinations.
+                            With carefully planned tours, your perfect getaway starts here.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+
+        </div>
+
+        <section class="features-container">
+        <!-- owner:abdo rafat -->
+            <div class="feature-container1">
+                <div class="feature-img">
+                    <h3 class="whatServe">What we serve</h3>
+                </div>
+                <div class="feature-txt">
+                    <h2>We offer our best <br> services</h2>
+                </div>
+            </div>
+            <div class="feature-container">
+                <div class="feature-img">
+                    <i class="ri-sun-cloudy-line"></i>
+                </div>
+                <div class="feature-txt">
+                    <h3>Calculate Weather</h3>
+                    <p>Know the best time to travel and enjoy every destination at its best.</p>
+                </div>
+            </div>
+            <div class="feature-container">
+                <div class="feature-img">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+                <div class="feature-txt">
+                    <h3>Best Tour Guide</h3>
+                    <p>Discover hidden gems and travel with confidence wherever you go.</p>
+                </div>
+            </div>
+            <div class="feature-container">
+                <div class="feature-img">
+                    <i class="ri-folder-settings-line"></i>
+                </div>
+                <div class="feature-txt">
+                    <h3>Customization</h3>
+                    <p>Create your perfect journey exactly the way you imagine it.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="explore-container">
+            <h3 class="exploreWord">Explore</h3>
+            <h2>Our featured tours</h2>
+            <div class="tours-container">
+                <div class="tours1">
+                    <div class="tours1-img1Container tour-img-container">
+                        <div class="img-placeholder">
+                            <h2 class="state-name">Big Ben</h2>
+                            <h3 class="state-country-name">LONDON</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="tours1-img2Container tour-img-container">
+                        <div class="img-placeholder">
+                            <h2 class="state-name">Giza</h2>
+                            <h3 class="state-country-name">EGYPT</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="tours2">
+                    <div class="tours2-img1container tour-img-container">
+                        <div class="img-placeholder">
+                            <h2 class="state-name">Bali</h2>
+                            <h3 class="state-country-name">INDONESIA</h3>
+                        </div>
+                    </div>
+                    <div class="tours2-img2container tour-img-container">
+                        <div class="img-placeholder">
+                            <h2 class="state-name">Phetchabun</h2>
+                            <h3 class="state-country-name">THAILAND</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tours3">
+                    <div class="tours3-bigImg tour-img-container" >
+                        <div class="img-placeholder">
+                            <h2 class="state-name">Sydney</h2>
+                            <h3 class="state-country-name">AUSTRAILIA</h3>
+                        </div>
+                    </div>
+                    <div class="tours3-2">
+                        <div class="tours3-2-img1container tour-img-container">
+                            <div class="img-placeholder">
+                            <h2 class="state-name">Wuxi</h2>
+                            <h3 class="state-country-name">CHINA</h3>
+                        </div>
+                        </div>
+                        <div class="tours3-2-img2container tour-img-container">
+                            <div class="img-placeholder">
+                            <h2 class="state-name">Paris</h2>
+                            <h3 class="state-country-name">FRANCE</h3>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tours4">
+                    <div class="tours4-img1container tour-img-container">
+                        <div class="img-placeholder">
+                            <h2 class="state-name">Rio de Janeiro</h2>
+                            <h3 class="state-country-name">BRAZIL</h3>
+                        </div>
+                    </div>
+                    <div class="tours4-img2container tour-img-container">
+                        <div class="img-placeholder">
+                            <h2 class="state-name">Santorini</h2>
+                            <h3 class="state-country-name">GREECE</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="experience-container">
+            <div class="experience-text">
+                <h3 class="exploreWord">Experience</h3>
+                <h2>With years of experience <br> We create journeys you’ll never forget</h2>
+                <p class="ex-paragraph">At WindsMeet , we combine passion, expertise, and attention to detail to deliver exceptional travel experiences. <br>
+                    Our team works tirelessly to plan every trip with care — from choosing the best destinations <br>
+                        To ensuring comfort, safety, and unforgettable memories for every traveler.
+                </p>
+                <div class="records-container">
+                    <div class="record-card">
+                        <div class="record-value">
+                            <h2>12k+</h2>
+                        </div>
+                        <h5>Successful trip</h5>
+                    </div>
+                    <div class="record-card">
+                        <div class="record-value">
+                            <h2>2k+</h2>
+                        </div>
+                        <h5>Regular clients</h5>
+                    </div>
+                    <div class="record-card">
+                        <div class="record-value">
+                            <h2>15 </h2>
+                        </div>
+                        <h5>Year experience</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <img src="images/testimonal.png" alt="testimonal">
+
+        </section>
+
+        <section class="gallery-container-sec">
+            <h3 class="exploreWord">Gallery</h3>
+            <h2>Visit our customers tour gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery1">
+                    <img class="gallery1-img1" src="images/aboutUs.png" alt="state-view">
+                    <img class="gallery1-img2" src="images/gallery2.png" alt="state-view">
+                </div>
+                <div class="gallery2">
+                    <img class="gallery2-img1 " src="images/gallery3.png" alt="state-view">
+                    <img class="gallery2-img2 " src="images/gallery5.png" alt="state-view">
+                </div>
+
+                <div class="gallery3">
+                    <img class="gallery3-beach" src="images/gallery4.png" alt="state-view">
+                    <div class="gallery3-2">
+                        <img class="gallery3-img1"  src="images/gallery6.png" alt="state-view">
+                    </div>
+                </div>
+                <div class="gallery4">
+                    <img class="gallery2-img1 " src="images/gallery7.png" alt="state-view">
+                    <img class="gallery2-img2 " src="images/gallery8.png" alt="state-view">
+                </div>
+                <div class="gallery5">
+                    <img class="gallery5-img1 " src="images/gallery10.png" alt="state-view">
+                    <img class="gallery5-img2 " src="images/gallery9.png" alt="state-view">
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="testimonal-container">
+            <h3 class="exploreWord">Fans Love</h3>
+            <h2>What our fans say about us</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                    <img src="images/fan1.png" class="card-img-top" alt="fan ">
+                    <div class="card-body">
+                        <h5 class="card-title">Ibrahem</h5>
+                        <p class="card-text">Amazing destinations, great prices, and professional planning. This agency truly cares about creating memorable experiences. I would recommend them to anyone looking for a perfect getaway.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 1 day ago</small>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                    <img src="images/fan2.png" class="card-img-top" alt="fan ">
+                    <div class="card-body">
+                        <h5 class="card-title">Omar</h5>
+                        <p class="card-text">The team was incredibly helpful and responsive. They customized our trip exactly the way we wanted and handled every detail smoothly. Traveling has never been this easy and stress-free.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 11 mins ago</small>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                    <img src="images/me.jpg" class="card-img-top" alt="fan ">
+                    <div class="card-body">
+                        <h5 class="card-title">ِAbdul-Rahman</h5>
+                        <p class="card-text">From the very first booking until the end of our trip, everything was perfectly organized. The destinations were stunning and the service exceeded our expectations. I can’t wait to book my next adventure with them!</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 5 hours ago</small>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <section id="contact" class="contact-information-cover">
+        <div class="contact-information">
+            <div class="contact-information-card-container">
+                <div class="contact-information-card1 card">
+                    <i class="ri-map-pin-line"></i>
+                    <div class="contact-txt">
+                        <h4>Our Location</h4>
+                        <p>11.New ST. Shobra, Cairo , Egypt</p>
+                    </div>
+                </div>
+                <div class="contact-information-card2 card">
+                    <i class="ri-phone-line"></i>
+                    <div class="contact-txt">
+                        <h4>Call Us 24/7</h4>
+                        <h2>(+20) 111-3545-007</h2>
+                    </div>
+                </div>
+                <div class="contact-information-card3 card">
+                    <i class="ri-mail-line"></i>
+                    <div class="contact-txt">
+                        <h4>SUBSCRIBE NEWSLTTER</h4>
+                        <div class="email-address-container">
+                            <input class="email-field" type="text" placeholder="Your email address">
+                            <button class="subscribe-btn">Subscribe</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <footer id="about" class="footer-container">
+            <div class="footer">
+                <div class="company">
+                    <div class="logo-container">
+                        
+                        <div class="sky">
+                            <i class="fa-solid fa-cloud cloud1"></i>
+                            <i class="fa-solid fa-plane"></i>
+                            <i class="fa-solid fa-cloud cloud2"></i>
+                        </div>
+                        <h1>WindsMeet</h1>
+                    </div>
+                    <p class="footer-summery">Your trusted partner for unforgettable travel experiences.
+                    We offer carefully planned trips, exciting tours, and seamless travel services.
+                    Explore new destinations, create memories, and travel with comfort and confidence.
+                    Eat clean, live healthy.</p>
+                    <div class="social-media">
+                        <i class="ri-facebook-fill"onclick="window.open('https://www.facebook.com/abdelrahmanrafat477/', '_blank')"></i>
+                        <i class="ri-linkedin-fill"onclick="window.open('https://www.linkedin.com/in/abdul-rahman-rafat-b571a4361/', '_blank')"></i>
+                        <i class="ri-whatsapp-fill"onclick="window.open('https://wa.me/201011223344?text=Hello%20I%20want%20to%20contact%20you','_blank')"></i>
+                        <i class="ri-twitter-x-line"></i>
+                        <i class="ri-instagram-line"></i>
+                    </div>
+                </div>
+
+                <div class="myaccount">
+                    <h2 class="links-title">Discover</h2>
+                    <hr>
+                    <ul class="footer-links">
+                        <li onclick="location.href='index.html'">Home</li>
+                        <li onclick="location.href='aboutUs.html'">About</li>
+                        <li onclick="location.href='tours.html'">Tours</li>
+                        
+                    </ul>
+                </div>
+                <div class="help">
+                    <h2 class="links-title">Quick Links</h2>
+                    <hr>
+                    <ul class="footer-links">
+                        
+                        <li onclick="location.href='tours.html'">Gallery</li>
+                        <li onclick="location.href='login.html'">Login</li>
+                        <li onclick="location.href='register.html'" >Register</li>
+                    </ul>
+                </div>
+                <div class="proxy">
+                    <h2 class="links-title">Contact</h2>
+                    <hr>
+                    <ul class="footer-links">
+                        <li onclick="location.href='aboutUs.html'"><i class="ri-map-pin-line"></i> Address: Cairo,EG</li>
+                        
+                        <li onclick="location.href='products.html'"> <i class="ri-mail-line"></i> Email: abdorafat489@gmail</li>
+                        <li onclick="window.open('https://wa.me/201011223344?text=Hello%20I%20want%20to%20contact%20you','_blank')"> <i class="ri-phone-fill"></i>  Phone: +201113545007 </li>
+                    </ul>
+                </div>
+
+
+                <div class="download-mobile-app">
+                    <h2 class="links-title">Download Mobile App</h2>
+                    <hr>
+                    <div class="download-container">
+                        <div class="download">
+                            <i class="ri-apple-fill"></i>
+                            <div>
+                                <p>Download on the</p>
+                                <h2>App Store</h2>
+                            </div>
+                        </div>
+                        <div class="download">
+                            <i class="ri-google-play-fill"></i>
+                            <div>
+                                <p>Download on the</p>
+                                <h2>Google play</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-container">
+                <div class="copyright">
+                    <p class="copyright-txt">© WindsMeet Travel Agency  2025 — Built by Abdul Rahman Rafat All Rights Reserved</p>
+                    <p class="front-developer">coded by Abdulrahman-R</p>
+                    <div class="payment-methods">
+                        <i class="ri-apple-fill">pay</i>
+                        <i class="ri-paypal-fill"></i>
+                        <i class="ri-visa-line"></i>
+                        <i class="ri-mastercard-fill"></i>
+
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+        
+    <div onclick="return_home()" class="up-home-arrow">
+        <i class="ri-arrow-up-s-line"></i>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
