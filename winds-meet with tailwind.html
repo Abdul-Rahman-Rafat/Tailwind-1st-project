@@ -169,46 +169,79 @@
             <h3 class="exploreWord text-gray-900 bg-[#FAA935] w-fit p-3 rounded-3xl transition-all duration-300 ease-in-out hover:scale-105">Explore</h3>
             <h2>Our featured tours</h2>
             <div class="tours-container flex flex-wrap gap-4 mt-6
-            [&_.tours-container_.tour-img-container]:flex
-            [&_.tours-container_.tour-img-container]:items-center
-            [&_.tours-container_.tour-img-container]:justify-center
-            [&_.tours-container_.tour-img-container]:transition-all [&_.tours-container_.tour-img-container]:duration-300 [&_.tours-container_.tour-img-container]:ease-in-out
-            [&_.tours-container_.tour-img-container]:hover:scale-105
-            [&_.tours-container_.tour-img-container]:relative
+            [&_.tour-img-container]:flex
+            [&_.tour-img-container]:items-center
+            [&_.tour-img-container]:justify-center
+            [&_.tour-img-container]:transition-all [&_.tour-img-container]:duration-300 [&_.tour-img-container]:ease-in-out
+            [&_.tour-img-container]:hover:scale-105
+            [&_.tour-img-container]:relative
+            [&_.tour-img-container]:rounded-md
 
-            [&_.tours-container_.tour-img-container]:before:content-none   
-            [&_.tours-container_.tour-img-container]:before:absolute
-            [&_.tours-container_.tour-img-container]:before:inset-0
-            [&_.tours-container_.tour-img-container]:before:bg-[#000000]
-            [&_.tours-container_.tour-img-container]:before:rounded-md
-            [&_.tours-container_.tour-img-container]:before:hover:bg-[#000000]/50
+            [&_.tour-img-container]:before:content-['']
+            [&_.tour-img-container]:before:absolute
+            [&_.tour-img-container]:before:inset-0
+            [&_.tour-img-container]:before:bg-[#000000]/50
+            [&_.tour-img-container]:before:rounded-lg
+            [&_.tour-img-container:hover]:before:bg-[#000000]/0
+            [&_.tour-img-container_*]:relative
+            [&_.tour-img-container_*]:z-10
+
+
+            [&_.img-placeholder]:text-white
+            [&_.img-placeholder]:text-center
+
+            [&_.state-name]:!text-white
+            [&_.state-country-name]:!text-[#FAA935] [&_.state-country-name]:font-mono
 
 
             
             ">
-                <div class="tours1">
-                    <div class="tours1-img1Container tour-img-container">
+                <div class="tours1 flex flex-col gap-3 rounded-lg">
+                    <div class="tours1-img1Container
+                    !bg-[url(images/bigben.png)]
+                    bg-cover
+                    w-[320px]
+                    h-[300px]
+                    tour-img-container">
                         <div class="img-placeholder">
                             <h2 class="state-name">Big Ben</h2>
                             <h3 class="state-country-name">LONDON</h3>
                         </div>
                         
                     </div>
-                    <div class="tours1-img2Container tour-img-container">
+                    <div class="tours1-img2Container
+                    !bg-[url(images/tours10.1.png)]
+                    bg-cover
+                    w-[320px]
+                    h-[300px]
+
+                    tour-img-container">
                         <div class="img-placeholder">
                             <h2 class="state-name">Giza</h2>
                             <h3 class="state-country-name">EGYPT</h3>
                         </div>
                     </div>
                 </div>
-                <div class="tours2">
-                    <div class="tours2-img1container tour-img-container">
+                <div class="tours2 flex flex-col gap-3">
+                    <div class="tours2-img1container
+                    !bg-[url(images/bali.png)]
+                    bg-cover
+                    w-[320px]
+                    h-[380px]
+                    
+                    tour-img-container">
                         <div class="img-placeholder">
                             <h2 class="state-name">Bali</h2>
                             <h3 class="state-country-name">INDONESIA</h3>
                         </div>
                     </div>
-                    <div class="tours2-img2container tour-img-container">
+                    <div class="tours2-img2container
+                    !bg-[url(images/phetchabun.png)]
+                    bg-cover
+                    w-[320px]
+                    h-[310px]
+                    
+                    tour-img-container">
                         <div class="img-placeholder">
                             <h2 class="state-name">Phetchabun</h2>
                             <h3 class="state-country-name">THAILAND</h3>
@@ -216,21 +249,38 @@
                     </div>
                 </div>
 
-                <div class="tours3">
-                    <div class="tours3-bigImg tour-img-container" >
+                <div class="tours3 flex flex-col gap-3">
+                    <div class="tours3-bigImg
+                    !bg-[url(images/sydney.png)]
+                    bg-cover
+                    w-[650px]
+                    h-[300px]
+                    tour-img-container" >
                         <div class="img-placeholder">
                             <h2 class="state-name">Sydney</h2>
                             <h3 class="state-country-name">AUSTRAILIA</h3>
                         </div>
                     </div>
-                    <div class="tours3-2">
-                        <div class="tours3-2-img1container tour-img-container">
+                    <div class="tours3-2 flex flex-wrap gap-3">
+                        <div class="tours3-2-img1container
+                        !bg-[url(images/wuxi.png)]
+                        bg-cover
+                        w-[320px]
+                        h-[300px]
+
+                        tour-img-container">
                             <div class="img-placeholder">
                             <h2 class="state-name">Wuxi</h2>
                             <h3 class="state-country-name">CHINA</h3>
                         </div>
                         </div>
-                        <div class="tours3-2-img2container tour-img-container">
+                        <div class="tours3-2-img2container
+                        
+                        !bg-[url(images/paris.png)]
+                        bg-cover
+                        w-[320px]
+                        h-[340px]
+                        tour-img-container">
                             <div class="img-placeholder">
                             <h2 class="state-name">Paris</h2>
                             <h3 class="state-country-name">FRANCE</h3>
@@ -238,14 +288,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="tours4">
-                    <div class="tours4-img1container tour-img-container">
+                <div class="tours4 flex flex-col gap-3">
+                    <div class="tours4-img1container
+                    
+                    !bg-[url(images/rio.png)]
+                    bg-cover
+                    w-[320px]
+                    h-[340px]
+                    
+                    tour-img-container">
                         <div class="img-placeholder">
                             <h2 class="state-name">Rio de Janeiro</h2>
                             <h3 class="state-country-name">BRAZIL</h3>
                         </div>
                     </div>
-                    <div class="tours4-img2container tour-img-container">
+                    <div class="tours4-img2container
+                    
+                    !bg-[url(images/santorini.png)]
+                    bg-cover
+                    w-[320px]
+                    h-[300px]
+
+                    tour-img-container">
                         <div class="img-placeholder">
                             <h2 class="state-name">Santorini</h2>
                             <h3 class="state-country-name">GREECE</h3>
